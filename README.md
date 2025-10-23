@@ -1,5 +1,7 @@
 # Angular in Finland (ngFinland)
 
+<img width="1024" height="768" alt="ngFinland-banner" src="https://github.com/user-attachments/assets/5b76854d-7d64-4898-a065-38d805be7bba" />
+
 A modern Angular 21+ community platform inspired by Angular.dev, built for Angular developers in Finland.
 
 ## 🚀 Features
