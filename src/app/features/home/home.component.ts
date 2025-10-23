@@ -6,11 +6,10 @@ import { CardComponent } from '../../shared/card/card.component';
 import { SectionHeaderComponent } from '../../shared/section-header/section-header.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, RouterModule, ButtonComponent, CardComponent, SectionHeaderComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [CommonModule, RouterModule, ButtonComponent, CardComponent, SectionHeaderComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   communityHighlights = signal([

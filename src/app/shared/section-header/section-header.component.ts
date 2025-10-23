@@ -2,11 +2,10 @@ import { Component, Input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-section-header',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './section-header.component.html',
-  styleUrl: './section-header.component.scss'
+    selector: 'app-section-header',
+    imports: [CommonModule],
+    templateUrl: './section-header.component.html',
+    styleUrl: './section-header.component.scss'
 })
 export class SectionHeaderComponent {
   @Input() title = '';

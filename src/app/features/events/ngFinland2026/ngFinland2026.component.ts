@@ -24,11 +24,10 @@ interface Sponsor {
 }
 
 @Component({
-  selector: 'app-ng-finland2026',
-  standalone: true,
-  imports: [CommonModule, RouterModule, ButtonComponent, CardComponent, SectionHeaderComponent],
-  templateUrl: './ngFinland2026.component.html',
-  styleUrl: './ngFinland2026.component.scss'
+    selector: 'app-ng-finland2026',
+    imports: [CommonModule, RouterModule, ButtonComponent, CardComponent, SectionHeaderComponent],
+    templateUrl: './ngFinland2026.component.html',
+    styleUrl: './ngFinland2026.component.scss'
 })
 export class NgFinland2026Component {
   featuredSpeakers = signal<Speaker[]>([

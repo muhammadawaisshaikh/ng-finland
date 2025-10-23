@@ -4,11 +4,10 @@ import { RouterModule } from '@angular/router';
 import { ButtonComponent } from '../../../shared/button/button.component';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [CommonModule, RouterModule, ButtonComponent],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+    selector: 'app-navbar',
+    imports: [CommonModule, RouterModule, ButtonComponent],
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
   isMobileMenuOpen = signal(false);
