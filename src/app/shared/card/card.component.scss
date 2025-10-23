@@ -1,0 +1,83 @@
+// Card Component Styles
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.25rem);
+}
+
+// Card Variants
+.card--default {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card--elevated {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.card--elevated:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.card--outlined {
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+// Card Image
+.card-image {
+  width: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+// Card Content
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.card-action {
+  margin-top: 1rem;
+}
+
+.card-action-button {
+  color: #1e3a8a;
+  background: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0;
+  font-size: inherit;
+}
+
+.card-action-button:hover {
+  color: #3b82f6;
+}
+
+// Card without hover effect
+.card--no-hover:hover {
+  box-shadow: inherit;
+  transform: none;
+}

@@ -1,0 +1,12 @@
+<div class="text-center mb-12">
+  @if (subtitle) {
+    <p class="text-finland-blue font-medium text-lg mb-2 animate-fade-in">{{ subtitle }}</p>
+  }
+  <h2 [class]="titleClasses">{{ title }}</h2>
+  @if (description) {
+    <p class="text-gray-600 text-lg mt-4 max-w-3xl mx-auto animate-fade-in animate-delay-200">{{ description }}</p>
+  }
+  @if (showDivider) {
+    <div class="w-24 h-1 bg-gradient-to-r from-finland-blue to-finland-light-blue mx-auto mt-6 rounded-full animate-fade-in animate-delay-300"></div>
+  }
+</div>

@@ -1,0 +1,410 @@
+// ngFinland2026 Component Styles
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  animation: fade-in-up 1s ease-out;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #dbeafe;
+  margin-bottom: 1rem;
+  animation: fade-in-up 1s ease-out 0.2s both;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.875rem;
+  }
+}
+
+.hero-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  animation: fade-in-up 1s ease-out 0.4s both;
+}
+
+@media (min-width: 640px) {
+  .hero-details {
+    flex-direction: row;
+  }
+}
+
+.hero-detail-item {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-detail-item svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.hero-detail-text {
+  font-size: 1.125rem;
+}
+
+// Event Overview Section
+.event-overview {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.event-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .event-overview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.event-overview-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .event-overview-title {
+    font-size: 3rem;
+  }
+}
+
+.event-overview-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.event-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.event-stat {
+  text-align: center;
+}
+
+.event-stat-number {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.event-stat-label {
+  color: #4b5563;
+}
+
+.event-image {
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+// Featured Speakers Section
+.featured-speakers {
+  padding: 5rem 0;
+  background-color: #f9fafb;
+}
+
+.speakers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .speakers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Sponsors Section
+.sponsors {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.sponsor-tier {
+  margin-bottom: 3rem;
+}
+
+.sponsor-tier-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sponsor-tier-title.platinum {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sponsor-tier-title.gold {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.platinum-sponsors {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .platinum-sponsors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gold-sponsors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .gold-sponsors {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.other-sponsors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .other-sponsors {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.sponsor-card {
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.sponsor-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.sponsor-card.gold {
+  padding: 1.5rem;
+}
+
+.sponsor-card.other {
+  padding: 1rem;
+}
+
+.sponsor-logo {
+  height: 4rem;
+  margin: 0 auto 1rem auto;
+  object-fit: contain;
+}
+
+.sponsor-logo.gold {
+  height: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.sponsor-logo.other {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sponsor-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.sponsor-name.gold {
+  font-size: 0.875rem;
+}
+
+.sponsor-name.other {
+  font-size: 0.75rem;
+}
+
+// Event Highlights Section
+.event-highlights {
+  padding: 5rem 0;
+  background-color: #f9fafb;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.highlight-item {
+  text-align: center;
+}
+
+.highlight-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: #1e3a8a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.highlight-icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.highlight-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-description {
+  color: #4b5563;
+}
+
+// Registration CTA Section
+.registration-cta {
+  padding: 5rem 0;
+  background-color: #1e3a8a;
+}
+
+.cta-content {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .cta-title {
+    font-size: 3rem;
+  }
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  color: #dbeafe;
+  margin-bottom: 2rem;
+}
+
+.cta-pricing-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 28rem;
+  margin: 0 auto 2rem auto;
+}
+
+.pricing-amount {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-original {
+  color: #4b5563;
+  text-decoration: line-through;
+  margin-bottom: 1rem;
+}
+
+.pricing-note {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-disclaimer {
+  color: #bfdbfe;
+  font-size: 0.875rem;
+}
+
+// Animations
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

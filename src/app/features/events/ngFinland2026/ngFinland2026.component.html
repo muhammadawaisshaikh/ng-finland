@@ -1,0 +1,219 @@
+<!-- Hero Section -->
+<section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+  <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 animate-fade-in-up">
+      ngFinland 2026
+    </h1>
+    <p class="text-2xl md:text-3xl text-blue-100 mb-4 animate-fade-in-up animate-delay-200">
+      The Future of Angular
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-up animate-delay-400">
+      <div class="flex items-center text-white">
+        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span class="text-lg">June 15-16, 2026</span>
+      </div>
+      <div class="flex items-center text-white">
+        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <span class="text-lg">Vaasa, Finland</span>
+      </div>
+    </div>
+    <app-button 
+      variant="secondary" 
+      size="lg"
+      (onClick)="scrollToRegistration()">
+      Register Now
+    </app-button>
+  </div>
+</section>
+
+<!-- Event Overview -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-slide-in-left">
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+          Two Days of Angular Excellence
+        </h2>
+        <p class="text-xl text-gray-600 mb-6">
+          Join us for an immersive experience featuring the latest Angular innovations, 
+          expert talks, hands-on workshops, and networking opportunities.
+        </p>
+        <div class="grid grid-cols-2 gap-6">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-finland-blue mb-2">50+</div>
+            <div class="text-gray-600">Speakers</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-finland-blue mb-2">500+</div>
+            <div class="text-gray-600">Attendees</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-finland-blue mb-2">20+</div>
+            <div class="text-gray-600">Workshops</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-finland-blue mb-2">2</div>
+            <div class="text-gray-600">Days</div>
+          </div>
+        </div>
+      </div>
+      <div class="animate-slide-in-right">
+        <img 
+          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" 
+          alt="Angular conference venue"
+          class="rounded-2xl shadow-2xl">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Speakers -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <app-section-header 
+      title="Featured Speakers"
+      subtitle="Industry Leaders"
+      description="Learn from the best minds in Angular development and web technologies"
+      size="lg" />
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (speaker of featuredSpeakers(); track speaker.id) {
+        <app-card
+          [title]="speaker.name"
+          [subtitle]="speaker.talkTitle"
+          [image]="speaker.image"
+          [imageAlt]="speaker.name"
+          variant="elevated">
+          <div class="text-sm text-gray-600 mb-2">{{ speaker.title }} at {{ speaker.company }}</div>
+          <p class="text-gray-700 text-sm">{{ speaker.bio }}</p>
+        </app-card>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Sponsors -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <app-section-header 
+      title="Our Sponsors"
+      subtitle="Supporting the Community"
+      description="Thank you to our amazing sponsors who make ngFinland 2026 possible"
+      size="lg" />
+    
+    <!-- Platinum Sponsors -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Platinum Sponsors</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        @for (sponsor of platinumSponsors(); track sponsor.id) {
+          <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
+            <img [src]="sponsor.logo" [alt]="sponsor.name" class="h-16 mx-auto mb-4 object-contain">
+            <h4 class="text-xl font-semibold text-gray-900">{{ sponsor.name }}</h4>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Gold Sponsors -->
+    <div class="mb-12">
+      <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Gold Sponsors</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        @for (sponsor of goldSponsors(); track sponsor.id) {
+          <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <img [src]="sponsor.logo" [alt]="sponsor.name" class="h-12 mx-auto mb-3 object-contain">
+            <h4 class="text-sm font-semibold text-gray-900">{{ sponsor.name }}</h4>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Silver & Bronze Sponsors -->
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+      @for (sponsor of otherSponsors(); track sponsor.id) {
+        <div class="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300">
+          <img [src]="sponsor.logo" [alt]="sponsor.name" class="h-8 mx-auto mb-2 object-contain">
+          <h4 class="text-xs font-medium text-gray-900">{{ sponsor.name }}</h4>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Event Highlights -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <app-section-header 
+      title="Event Highlights"
+      subtitle="What to Expect"
+      description="Discover the amazing experiences waiting for you at ngFinland 2026"
+      size="lg" />
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-finland-blue rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Expert Talks</h3>
+        <p class="text-gray-600">Learn from industry leaders about the latest Angular features, best practices, and real-world applications.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-16 h-16 bg-finland-blue rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Hands-on Workshops</h3>
+        <p class="text-gray-600">Get practical experience with Angular through interactive workshops led by experienced developers.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-16 h-16 bg-finland-blue rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Networking</h3>
+        <p class="text-gray-600">Connect with fellow Angular developers, share experiences, and build lasting professional relationships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Registration CTA -->
+<section id="registration" class="py-20 bg-finland-blue">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+      Ready to Join Us?
+    </h2>
+    <p class="text-xl text-blue-100 mb-8">
+      Don't miss out on the most exciting Angular event in Finland. Early bird pricing available now!
+    </p>
+    <div class="bg-white rounded-2xl p-8 max-w-md mx-auto mb-8">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-finland-blue mb-2">€199</div>
+        <div class="text-gray-600 line-through mb-4">€299</div>
+        <div class="text-sm text-gray-600 mb-6">Early Bird Price (Limited Time)</div>
+        <app-button 
+          variant="primary" 
+          size="lg"
+          [fullWidth]="true"
+          (onClick)="registerNow()">
+          Register Now
+        </app-button>
+      </div>
+    </div>
+    <p class="text-blue-200 text-sm">
+      * Early bird pricing ends March 31, 2026
+    </p>
+  </div>
+</section>
