@@ -60,12 +60,11 @@ export class HomeComponent {
     window.location.href = '/events/ngfinland2026';
   }
 
-  joinSlack() {
-    window.open('https://ngfinland.slack.com', '_blank');
-  }
-
-  joinDiscord() {
-    window.open('https://discord.gg/ngfinland', '_blank');
+  /**
+   * Open the community Linktree containing Slack / Discord and other links.
+   */
+  joinCommunity() {
+    window.open('https://linktr.ee/ngfinland', '_blank', 'noopener,noreferrer');
   }
 
   openGitHub() {
