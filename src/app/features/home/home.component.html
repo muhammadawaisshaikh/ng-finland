@@ -2,11 +2,17 @@
 <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
   <!-- Background Pattern -->
   <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow"></div>
-    <div class="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-2000"></div>
-    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-4000"></div>
+    <div
+      class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow">
+    </div>
+    <div
+      class="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-2000">
+    </div>
+    <div
+      class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-4000">
+    </div>
   </div>
-  
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center">
       <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 animate-fade-in-up">
@@ -16,56 +22,60 @@
         Welcome to Angular in Finland — the hub for Angular enthusiasts across Finland.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-400">
-        <app-button 
-          variant="secondary" 
-          size="lg"
-          (onClick)="scrollToRegistration()">
+        <app-button variant="secondary" size="lg" (onClick)="scrollToRegistration()">
           Join Community
         </app-button>
-        <app-button 
-          variant="outline" 
-          size="lg"
-          (onClick)="scrollToEvents()">
+        <app-button variant="outline" size="lg" (onClick)="scrollToEvents()">
           Upcoming Event
         </app-button>
       </div>
     </div>
   </div>
-  
+
   <!-- Scroll Indicator -->
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
     </svg>
+  </div>
+</section>
+
+<section class="py-12 bg-gray-50 flex justify-center">
+  <div class="max-w-6xl w-full px-4">
+    <!-- Heading -->
+    <app-section-header title="Events" subtitle="Register Now"
+      description="Discover the latest events in the Angular Finland community" size="lg" />
+
+    <!-- Events Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden p-4">
+        <iframe src="https://luma.com/embed/event/evt-KSlTzEEBXYN4gFc/simple" width="100%" height="500" frameborder="0"
+          style="border: 0; border-radius: 0; background: white;" allow="fullscreen; payment" aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Community Highlights -->
 <section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <app-section-header 
-      title="Community Highlights"
-      subtitle="What&apos;s Happening"
-      description="Discover the latest activities and events in the Angular Finland community"
-      size="lg" />
-    
+    <app-section-header title="Community Highlights" subtitle="What&apos;s Happening"
+      description="Discover the latest activities and events in the Angular Finland community" size="lg" />
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       @for (highlight of communityHighlights(); track highlight.id) {
-        <app-card
-          [title]="highlight.title"
-          [subtitle]="highlight.subtitle"
-          [image]="highlight.image"
-          [imageAlt]="highlight.imageAlt"
-          [actionText]="highlight.actionText"
-          variant="elevated"
-          (onAction)="highlight.action()" />
+      <app-card [title]="highlight.title" [subtitle]="highlight.subtitle" [image]="highlight.image"
+        [imageAlt]="highlight.imageAlt" [actionText]="highlight.actionText" variant="elevated"
+        (onAction)="highlight.action()" />
       }
     </div>
   </div>
 </section>
 
 <!-- ngFinland 2026 Preview -->
-<section id="events" class="py-20 bg-white">
+<!-- <section id="events" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div class="animate-slide-in-left">
@@ -120,7 +130,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Registration CTA -->
 <section id="registration" class="py-20 bg-finland-blue">
@@ -132,10 +142,7 @@
       Be part of the Angular community in Finland. Connect, learn, and grow together.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <app-button
-        variant="secondary"
-        size="lg"
-        (onClick)="joinCommunity()">
+      <app-button variant="secondary" size="lg" (onClick)="joinCommunity()">
         Join the Community
       </app-button>
     </div>
