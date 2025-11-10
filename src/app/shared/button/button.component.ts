@@ -14,6 +14,10 @@ export class ButtonComponent {
   @Input() disabled = false;
   @Input() loading = false;
   @Input() fullWidth = false;
+  // Link support: when href is provided the component renders an anchor
+  @Input() href?: string;
+  @Input() target?: string;
+  @Input() rel?: string;
 
   @Output() onClick = new EventEmitter<Event>();
 
@@ -34,7 +38,10 @@ export class ButtonComponent {
     
     const widthClass = this.fullWidth ? 'w-full' : '';
     const disabledClass = this.disabled ? 'opacity-50 cursor-not-allowed hover:scale-100' : '';
-    
-    return `${baseClasses} ${variantClasses[this.variant]} ${sizeClasses[this.size]} ${widthClass} ${disabledClass}`;
+
+    // BEM style classes for legacy SCSS compatibility
+    const bem = `button button--${this.variant} button--${this.size} ${this.fullWidth ? 'button--full-width' : ''}`.trim();
+
+    return `${bem} ${baseClasses} ${variantClasses[this.variant]} ${sizeClasses[this.size]} ${widthClass} ${disabledClass}`;
   }
 }

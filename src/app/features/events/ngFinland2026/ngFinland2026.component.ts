@@ -1,7 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ButtonComponent } from '../../../shared/button/button.component';
 import { CardComponent } from '../../../shared/card/card.component';
 import { SectionHeaderComponent } from '../../../shared/section-header/section-header.component';
 
@@ -25,7 +24,7 @@ interface Sponsor {
 
 @Component({
     selector: 'app-ng-finland2026',
-    imports: [CommonModule, RouterModule, ButtonComponent, CardComponent, SectionHeaderComponent],
+  imports: [CommonModule, RouterModule, CardComponent, SectionHeaderComponent],
     templateUrl: './ngFinland2026.component.html',
     styleUrl: './ngFinland2026.component.scss'
 })

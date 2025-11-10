@@ -1,0 +1,45 @@
+<div class="p-4 max-w-5xl mx-auto">
+  <h2 class="text-2xl font-semibold mb-4">Admin — Call for Papers</h2>
+
+  <div class="flex items-center gap-4 mb-4">
+    <label class="text-sm">Filter:</label>
+    <select (change)="$any($event.target).value && (filter.set($any($event.target).value))" class="rounded border p-2">
+      <option value="all">All</option>
+      <option value="pending">Pending</option>
+      <option value="approved">Approved</option>
+      <option value="rejected">Rejected</option>
+    </select>
+  <button class="ml-auto px-3 py-1 bg-gray-200 rounded" (click)="supabase.getSubmissions()">Refresh</button>
+  <button class="ml-2 px-3 py-1 bg-red-500 text-white rounded" (click)="logout()">Logout</button>
+  </div>
+
+  <div *ngIf="loading()" class="text-sm text-gray-600 mb-2">Loading submissions...</div>
+
+  <table class="w-full table-auto border-collapse">
+    <thead>
+      <tr class="text-left">
+        <th class="border-b py-2">Name</th>
+        <th class="border-b py-2">Email</th>
+        <th class="border-b py-2">Title</th>
+        <th class="border-b py-2">Event</th>
+        <th class="border-b py-2">Status</th>
+        <th class="border-b py-2">Submitted</th>
+        <th class="border-b py-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of filtered()" class="align-top">
+        <td class="py-2">{{ s.name }}</td>
+        <td class="py-2">{{ s.email }}</td>
+        <td class="py-2">{{ s.title }}</td>
+        <td class="py-2">{{ s.event_type }}</td>
+        <td class="py-2">{{ s.status }}</td>
+        <td class="py-2">{{ s.created_at | date:'short' }}</td>
+        <td class="py-2">
+          <button class="px-2 py-1 bg-green-600 text-white rounded mr-2" (click)="setStatus(s.id,'approved')">Approve</button>
+          <button class="px-2 py-1 bg-red-600 text-white rounded" (click)="setStatus(s.id,'rejected')">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

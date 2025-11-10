@@ -16,6 +16,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Ignore environment files (keep example checked in)
+/src/environments/*.ts
+!/src/environments/environment.example.ts
 .env.development
 .env.test
 .env.production

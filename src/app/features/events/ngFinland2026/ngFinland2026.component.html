@@ -23,12 +23,9 @@
         <span class="text-lg">Vaasa, Finland</span>
       </div>
     </div>
-    <app-button 
-      variant="secondary" 
-      size="lg"
-      (onClick)="scrollToRegistration()">
+    <button class="inline-flex items-center justify-center font-semibold rounded-lg px-8 py-4 text-lg bg-white hover:bg-gray-50 text-finland-blue border-2 border-finland-blue transition-all duration-300" (click)="scrollToRegistration()">
       Register Now
-    </app-button>
+    </button>
   </div>
 </section>
 
@@ -203,13 +200,9 @@
         <div class="text-4xl font-bold text-finland-blue mb-2">€199</div>
         <div class="text-gray-600 line-through mb-4">€299</div>
         <div class="text-sm text-gray-600 mb-6">Early Bird Price (Limited Time)</div>
-        <app-button 
-          variant="primary" 
-          size="lg"
-          [fullWidth]="true"
-          (onClick)="registerNow()">
+        <button class="inline-flex items-center justify-center font-semibold rounded-lg px-8 py-4 text-lg bg-finland-blue hover:bg-finland-light-blue text-white transition-all duration-300 w-full" (click)="registerNow()">
           Register Now
-        </app-button>
+        </button>
       </div>
     </div>
     <p class="text-blue-200 text-sm">

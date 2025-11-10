@@ -1,13 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ButtonComponent } from '../../shared/button/button.component';
+// ButtonComponent removed: using simple anchors/buttons with Tailwind instead
 import { CardComponent } from '../../shared/card/card.component';
 import { SectionHeaderComponent } from '../../shared/section-header/section-header.component';
 
 @Component({
     selector: 'app-home',
-    imports: [CommonModule, RouterModule, ButtonComponent, CardComponent, SectionHeaderComponent],
+  imports: [CommonModule, RouterModule, CardComponent, SectionHeaderComponent],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })

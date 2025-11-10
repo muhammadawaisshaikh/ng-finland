@@ -27,6 +27,11 @@
              class="text-gray-900 hover:text-finland-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
             Community
           </a>
+          <a routerLink="/submit" 
+             class="text-gray-900 hover:text-finland-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+             routerLinkActive="text-finland-blue">
+            Call for Papers
+          </a>
           <a href="#about" 
              class="text-gray-900 hover:text-finland-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
             About
@@ -36,12 +41,9 @@
 
       <!-- CTA Button -->
       <div class="hidden md:block">
-        <app-button 
-          variant="primary" 
-          size="sm"
-          (onClick)="scrollToRegistration()">
+        <a href="https://linktr.ee/ngfinland" target="_blank" rel="noopener" class="inline-flex items-center justify-center font-semibold rounded-lg px-4 py-2 text-sm bg-finland-blue hover:bg-finland-light-blue text-white transition-all duration-300">
           Join Community
-        </app-button>
+        </a>
       </div>
 
       <!-- Mobile menu button -->
@@ -84,19 +86,21 @@
            (click)="closeMobileMenu()">
           Community
         </a>
+        <a routerLink="/submit" 
+           class="text-gray-900 hover:text-finland-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+           routerLinkActive="text-finland-blue"
+           (click)="closeMobileMenu()">
+          Call for Papers
+        </a>
         <a href="#about" 
            class="text-gray-900 hover:text-finland-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
            (click)="closeMobileMenu()">
           About
         </a>
         <div class="pt-4">
-          <app-button 
-            variant="primary" 
-            size="md"
-            [fullWidth]="true"
-            (onClick)="scrollToRegistration(); closeMobileMenu()">
+          <a href="https://linktr.ee/ngfinland" target="_blank" rel="noopener" class="inline-flex items-center justify-center font-semibold rounded-lg px-6 py-3 text-base bg-finland-blue hover:bg-finland-light-blue text-white transition-all duration-300 w-full">
             Join Community
-          </app-button>
+          </a>
         </div>
       </div>
     </div>
