@@ -19,8 +19,15 @@ export class AdminViewComponent implements OnInit {
 
   ngOnInit(): void {
     // subscribe to BehaviorSubject
-    this.supabase.submissions$.subscribe(list => this.submissions.set(list));
-    this.supabase.loading$.subscribe(v => this.loading.set(v));
+    this.supabase.submissions$.subscribe(list => {
+      this.submissions.set(list);
+      // debug: log updates so missing data can be diagnosed in the browser console
+      console.debug('AdminView: submissions updated', list);
+    });
+    this.supabase.loading$.subscribe(v => {
+      this.loading.set(v);
+      console.debug('AdminView: loading', v);
+    });
     // initial load
     this.supabase.getSubmissions();
   }
