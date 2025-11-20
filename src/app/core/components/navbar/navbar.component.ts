@@ -27,4 +27,8 @@ export class NavbarComponent {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  openDiscord() {
+    window.open('https://discord.gg/tBmBxHCz', '_blank', 'noopener,noreferrer');
+  }
 }

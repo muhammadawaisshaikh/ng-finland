@@ -64,7 +64,7 @@ export class HomeComponent {
    * Open the community Linktree containing Slack / Discord and other links.
    */
   joinCommunity() {
-    window.open('https://linktr.ee/ngfinland', '_blank', 'noopener,noreferrer');
+    window.open('https://discord.gg/tBmBxHCz', '_blank', 'noopener,noreferrer');
   }
 
   openGitHub() {
