@@ -34,8 +34,25 @@
         </div>
       </div>
 
-      <!-- CTA Button -->
-      <div class="hidden md:block">
+      <!-- Right side: Socials + CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Social links -->
+        <div class="flex items-center space-x-3">
+          <a href="http://instagram.com/angular_in_finland/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-700 hover:text-finland-blue transition-colors duration-200">
+            <i class="fab fa-instagram text-lg" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.facebook.com/ngfinland/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-gray-700 hover:text-finland-blue transition-colors duration-200">
+            <i class="fab fa-facebook-f text-lg" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/109741106" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-700 hover:text-finland-blue transition-colors duration-200">
+            <i class="fab fa-linkedin-in text-lg" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@Ngfinland" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-gray-700 hover:text-finland-blue transition-colors duration-200">
+            <i class="fab fa-youtube text-lg" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- CTA Button -->
         <app-button 
           variant="primary" 
           size="sm"
@@ -97,6 +114,20 @@
             (onClick)="openDiscord(); closeMobileMenu()">
             Join Community
           </app-button>
+        </div>
+        <div class="pt-4 flex items-center justify-center space-x-4">
+          <a href="http://instagram.com/angular_in_finland/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-700 hover:text-finland-blue transition-colors duration-200">
+            <i class="fab fa-instagram text-2xl" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.facebook.com/ngfinland/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-gray-700 hover:text-finland-blue transition-colors duration-200">
+            <i class="fab fa-facebook-f text-2xl" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/109741106" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-700 hover:text-finland-blue transition-colors duration-200">
+            <i class="fab fa-linkedin-in text-2xl" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@Ngfinland" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-gray-700 hover:text-finland-blue transition-colors duration-200">
+            <i class="fab fa-youtube text-2xl" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </div>
