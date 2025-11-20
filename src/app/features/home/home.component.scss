@@ -1,11 +1,26 @@
 // Home Component Styles
 .hero-gradient {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+  /* Background image with dark-blue overlay to blend a theme color with the photo */
+  background-color: #0b2447; /* fallback */
+  background-image: url('https://i.ibb.co/PvNmLHw1/photo-1540575467063-178a50c2df87.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+}
+
+/* Overlay to apply a dark-blue shade blended with the image */
+.hero-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 34, 85, 0.6); /* dark-blue overlay */
+  mix-blend-mode: multiply;
+  z-index: 2;
 }
 
 .hero-pattern {

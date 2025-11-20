@@ -23,7 +23,9 @@ export class ButtonComponent {
     const variantClasses = {
       primary: 'bg-finland-blue hover:bg-finland-light-blue text-white focus:ring-finland-blue',
       secondary: 'bg-white hover:bg-gray-50 text-finland-blue border-2 border-finland-blue focus:ring-finland-blue',
-      outline: 'bg-transparent hover:bg-finland-blue text-finland-blue border-2 border-finland-blue hover:text-white focus:ring-finland-blue'
+      // Default outline should show white text and white border so it stands out on dark/hero backgrounds.
+      // On hover it will keep the existing hover background and switch the border to the brand blue.
+      outline: 'bg-transparent hover:bg-finland-blue text-white border-2 border-white hover:border-finland-blue hover:text-white focus:ring-finland-blue'
     };
     
     const sizeClasses = {
